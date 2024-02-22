@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tests DJANGO</title>
 <style>
 
 body{
@@ -17,11 +17,36 @@ p{
 color: white;
 
 }
+
+
+.minha-div {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      transition: background-color 0.3s ease; 
+    }
+
+    .minha-div:active {
+      background-color: red;
+    }
+
+
 </style>
 </head>
-<body>
+<body> 
 
-    <p> apenas testando..</p>
+    <div class="minha-div"></div>
+    
+
+    {% if minha_variavel in 'olá mundo, DJANGO' %}
+       <p> {{ minha_variavel}}</p> 
+    {% else %}
+        <p> condição falsa</p>
+    {% endif %}
+
+   <p> apenas testando..</p>
+
+   <p> {% block p %} paragrafo p {% endblock p %} </p>
     
 </body>
 </html>

@@ -5,8 +5,11 @@ from django.http import HttpResponse
 
 def blog(request):
 
+
+    variavel = 'olá mundo, DJANGO'
+
     
-    return render(request, 'bloga.html')
+    return render(request,  'bloga.html', {'minha_variavel': variavel})
 
 def blog2(request):
 
